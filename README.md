@@ -1,8 +1,3 @@
-CDMentropy
-==========
-
-Centered Dirichlet Mixture entropy estimator for binary data
-=======
 Bayesian Entropy estimator for binary vector observations
 =========================================================
 
@@ -11,7 +6,10 @@ However, if your data are in the form of binary vectors, you're in luck!
 CDMentropy provides two state-of-the-art Bayesian entropy estimators for binary vectors.
 It was primiarily developed for estimating entropy of neural spike trains, however, if your data has a similar structure that our prior assumes, it could work very well for you too.
 
-The MATLAB code is a reference implementation for the results described in the following paper:
+CDM refers to *Centered Dirichlet Mixture* which is the prior for our Bayesian entropy estimator.
+We center a Dirichlet distribution over all possible binary words around an independent Bernoulli (DBer) or a synchrony (DSyn) distribution.
+
+This MATLAB code is a reference implementation for the results described in the following paper:
 
 - Evan Archer, Il Memming Park, Jonathan W. Pillow. [Bayesian entropy estimation for binary spike train data using parametric prior knowledge. Neural Information Processing Systems](http://papers.nips.cc/paper/4873-bayesian-entropy-estimation-for-binary-spike-train-data-using-parametric-prior-knowledge) [(NIPS) 2013](http://books.nips.cc/nips26.html)
 
