@@ -21,7 +21,8 @@ To compiling the MEX code, run the following in `src` folder.
 
     >> makeMex
 
-Use the `startup.m` script in `src` to add the relevant paths to MATLAB.
+Use the `startup.m` script to add the relevant paths to MATLAB.
+(If you start MATLAB in `CDMentropy` directory, MATLAB automatically loads `startup.m`.)
 
 Quick example
 -------------
@@ -29,23 +30,24 @@ Let's say that your observation is in the following matrix form:
 
 ![](doc/figs/binary_vector_observations.png)
 
-Here, each column of your matrix corresponds to an `m` dimensional observation.
-To estimate entropy
+Here, each row of your matrix corresponds to an `m` dimensional observation, or "word".
+To estimate entropy of the first 7 observations, we simply call `computeH_CDM`.
 
     >> words = [...
-	[0 1 0 0 0 0 1]', ...
-	[1 0 0 0 0 0 1]', ...
-	[0 0 0 0 0 1 0]', ...
-	[0 1 0 0 0 0 1]', ...
-	[0 0 0 0 0 1 0]', ...
+	[0 1 0 0 0]; ...
+	[1 0 0 1 0]; ...
+	[0 0 0 0 0]; ...
+	[0 0 1 0 0]; ...
+	[0 0 0 1 0]; ...
+	[1 0 0 0 1]; ...
+	[1 1 1 1 0]; ...
     ];
-    >> [nn ocnts] = words2nnOcnts(words); % compact representation
-    >> H = computeH_BD(nn,ocnts,size(words,1)) % estimate entropy
-
+    >> H = computeH_CDM(words)
+    DSyn mode
     H =
-	2.6644
+	3.8495
 
-`computeH_BD` returns the estimated entropy in unit of bits.
+`computeH_CDM` returns the estimated entropy in unit of bits.
 
 Tutorial
 ========
