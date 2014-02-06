@@ -1,0 +1,3 @@
+[submodule "src/lib/PYMentropy"]
+	path = lib/PYMentropy
+	url = https://github.com/pillowlab/PYMentropy.git
