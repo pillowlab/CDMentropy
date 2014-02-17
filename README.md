@@ -1,12 +1,12 @@
 Bayesian Entropy estimator for binary vector observations
 =========================================================
 
-Estimating Shannon's entropy from data is difficult, especially when you have less data compared to all possible symbols.
+Estimating Shannon's entropy from data is difficult, especially when you have little data compared to the number of possible symbols.
 However, if your data are in the form of binary vectors, you're in luck!
-CDMentropy provides two state-of-the-art Bayesian entropy estimators for binary vectors.
-It was primiarily developed for estimating entropy of neural spike trains, however, if your data has a similar structure that our prior assumes, it could work very well for you too.
+CDMentropy provides two state-of-the-art Bayesian entropy estimators for binary vector data.
+CDMentropy was primiarily developed for estimating entropy of neural spike trains; however, if your data have a structure similar to that our prior assumes, it might work very well for you too.
 
-CDM refers to *Centered Dirichlet Mixture* which is the prior for our Bayesian entropy estimator.
+CDM stands for to *Centered Dirichlet Mixture*, which is the prior for our Bayesian entropy estimator.
 We center a Dirichlet distribution over all possible binary words around an independent Bernoulli (DBer) or a synchrony (DSyn) distribution.
 
 This MATLAB code is a reference implementation for the results described in the following paper:
@@ -110,6 +110,6 @@ A closely related sister-paper also appeared at the same conference:
 
 - Il Memming Park, Evan W. Archer, Kenneth Latimer, Jonathan W. Pillow. [Universal models for binary spike patterns using centered Dirichlet processes](http://papers.nips.cc/paper/5050-universal-models-for-binary-spike-patterns-using-centered-dirichlet-processes) NIPS 2013
 
-In the above paper, centered Dirichlet process is used to estimate the full distribution instead of entropy. A different prior named *cascaded logistic model* is used there, but unfortunately, it does not allow fast entropy estimation.
+In the above paper, centered Dirichlet processes are used to estimate the full distribution rather than the entropy. A different prior, the *cascaded logistic model*, is used there. Unfortunately, the cascaded logistic does not allow for fast entropy estimation.
 
 CDMentropy code shares some code from the [PYMentropy](https://github.com/pillowlab/PYMentropy) project. The PYM entropy estimator is a generic discrete entropy estimator, not restricted to binary vector obsevations.
