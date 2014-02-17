@@ -20,7 +20,7 @@ Downloading the source code:
     $ git clone 
     $ git submodule update --init # to pull the PYMentropy submodule
 
-To compiling the MEX code, run the following in `src` folder.
+To compile the MEX code, run the following in `src` folder.
 
     >> makeMex
 
