@@ -15,9 +15,10 @@ This MATLAB code is a reference implementation for the results described in the 
 
 Installation
 ------------
-Downloading the source code:
+Downloading the source code from command line:
 
     $ git clone https://github.com/pillowlab/CDMentropy.git
+    $ cd CDMentropy
     $ git submodule update --init # to pull the PYMentropy submodule
 
 To compile the MEX code, run the following in MATLAB.
