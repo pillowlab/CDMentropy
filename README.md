@@ -20,7 +20,7 @@ Downloading the source code:
     $ git clone https://github.com/pillowlab/CDMentropy.git
     $ git submodule update --init # to pull the PYMentropy submodule
 
-To compile the MEX code, run the following in `src` folder.
+To compile the MEX code, run the following in MATLAB.
 
     >> makeMex
 
