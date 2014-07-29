@@ -7,9 +7,12 @@ startup
 %% Check if the package is downloaded/installed correctly
 if ~exist('words2multiplicities')
     disp('Did you forget to "git submodule update --init"? Let me try it.')
+    disp('(This is not likely to work beacuse of libcurl shipped by MATLAB.)');
     system('git submodule update --init');
     if ~exist('words2multiplicities')
-	disp('ERROR: git command failed. Try downloading the zipped archive');
+	disp('ERROR: git command failed.')
+	disp('Suggestion 1: run "git submodule update --init" in commnad line');
+	disp('Suggestion 2: Try downloading the zipped archive');
 	return;
     end
 end
@@ -55,9 +58,9 @@ H2 = computeH_CDM(words, [], [], opts);
 fprintf('CDM entropy estimate [%f bits] under Bernoulli prior\n', H2);
 
 %% Using the compressed representation
-[nn ocnts] = words2nnOcnts(words); % compact representation
+[nn ocnts] = words2nnOcnts(words); % get the compact representation
 H3 = computeH_CDM(nn, ocnts, m, opts);
-fprintf('CDM entropy estimate [%f bits] under synchrony dist prior\n', H3);
+fprintf('CDM entropy estimate [%f bits] under Bernoulli prior\n', H3);
 
 %% Visualizing the word count histogram
 % Convert the words to unique identities
