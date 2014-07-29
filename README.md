@@ -55,6 +55,8 @@ To estimate entropy of the first 7 observations, we simply call `computeH_CDM`.
 `computeH_CDM` returns the estimated entropy in unit of *bits*.
 Note that this data did not have any coincidence (every word was unique), however, our estimator gave a reasonable estimate based on the prior.
 
+**Try `try_me.m` to see it in action!**
+
 Options
 -------
 The 4th argument is the option structure.
