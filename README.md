@@ -107,6 +107,29 @@ If more than one return value are requested to `computeH_CDM`, it samples from t
 The samples themselves can be accessed via extra output arguments.
 Consult documentation of `computeH_CDM` for more details.
 
+Functions
+---------
+Here are list of potentially useful functions provided by CDMentropy and PYMentropy. For detailed information use `help function` or `doc function` in MATLAB.
+
+Estimating entropy:
+ - `computeH_CDM`: estimate entropy using centered-Dirichlet mixture prior
+ - `computeH_PYM`: estimate entropy using Pitman-Yor mixture prior
+
+Miscellaneous:
+- `unit_test_CDM`: Unit test (run this if you doubt it's correctness)
+- `dirichletrnd`: draw random samples from a Dirichlet distribution
+
+Fast preprocessing of binary data:
+- `discreteTimeSeries2Words`: convert n-ary vector sequence to unique symbols
+- `fastWords2Counts`: convert n-ary vector sequence into counts
+
+Following functions form compact representation of the data:
+- `words2nnOcnts`
+- `multiplicitiesFromCounts`
+- `multiplicitiesFromSamples`
+- `multiplicitiesToCounts`
+- `words2multiplicities`
+
 External links
 ==============
 A closely related sister-paper also appeared at the same conference:
