@@ -4,13 +4,27 @@
 %% Add the library path
 startup
 
+%% Check if the package is downloaded/installed correctly
+if ~exist('words2multiplicities')
+    disp('Did you forget to "git submodule update --init"? Let me try it.')
+    system('git submodule update --init');
+    if ~exist('words2multiplicities')
+	disp('ERROR: git command failed. Try downloading the zipped archive');
+	return;
+    end
+end
+
 %% Compile the MEX files if not done already
 if exist('discreteTimeSeries2Words') ~= 3
     disp('MEX file not found. Attempting to compile it');
     try
 	makeMex
     catch
-	disp('Failed to compile MEX');
+	disp('Failed to compile MEX. Check your MEX setup.');
+	disp('Suggestion 0: install a C/C++ compiler (xcode, gcc, ...)');
+	disp('Suggestion 1: mex -setup');
+	disp('Suggestion 2: cd lib/PYMentropy/src/\nmex -v fastWords2Counts.c fastWordsTree.c\nand analyze the error');
+	return;
     end
 end
 
