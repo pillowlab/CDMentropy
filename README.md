@@ -11,7 +11,9 @@ We center a Dirichlet distribution over all possible binary words around an inde
 
 This MATLAB code is a reference implementation for the results described in the following paper:
 
-- Evan Archer, Il Memming Park, Jonathan W. Pillow. [Bayesian entropy estimation for binary spike train data using parametric prior knowledge. Neural Information Processing Systems](http://papers.nips.cc/paper/4873-bayesian-entropy-estimation-for-binary-spike-train-data-using-parametric-prior-knowledge) [(NIPS) 2013](http://books.nips.cc/nips26.html)
+- Evan Archer, Il Memming Park, Jonathan
+  W. Pillow. [Bayesian entropy estimation for binary spike train data using parametric prior knowledge. Neural Information Processing Systems](http://pillowlab.princeton.edu/pubs/abs_Archer_BDPentropy_NIPS13.html),
+  (NIPS) 2013
 
 Installation
 ------------
